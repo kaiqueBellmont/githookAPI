@@ -1,5 +1,10 @@
 # GitHookAPI
 ## This is the API created to work with Arqmeds gitHook
+### First clone the project:
+```python
+git clone https://github.com/kaiqueBellmont/githookAPI.git
+```
+
 ### installation guide:
 - 1: first make sure you create a file called .env in the root of your project.
 Use [this one](.env-example) as an example.
@@ -30,6 +35,21 @@ docker exec -it api-container-id bash
 docker ps
 ```
 ##### (then you copy and replace it)
+
+#### unit:
+```python
+python manage.py test api/tests/unit/
+```
+#### integration:
+```python
+python manage.py test api/tests/integration/
+```
+### PS:
+**if some tests fail, check that you created the .env correctly and that the Worker container is working:**
+```python
+GET http://127.0.0.1:8000/api/v1/code
+```
+
 
 ### Another way:
 **in a terminal, navigate to the root of the project:**
