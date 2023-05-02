@@ -1,3 +1,6 @@
+"""
+class responsible for parsing modified code recognized by git.
+"""
 import flake8.main.cli
 import sys
 import tempfile
@@ -8,10 +11,11 @@ from dataclasses import dataclass
 class AnalizeCode:
     """
     AnalizeCode class
+    class responsible for parsing modified code recognized by git.
     """
 
     @staticmethod
-    def analyze(code):
+    def analyze(code: dict) -> dict:
         """
         Analyzes a code and returns errors based on flake8 and PEP8
         """
